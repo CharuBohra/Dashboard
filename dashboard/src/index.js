@@ -4,6 +4,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { ContextProvider } from "./contexts/ContextProvider";
+import '@syncfusion/ej2/material.css';
+import '@syncfusion/ej2-react-popups/styles/material.css';
 
 
 ReactDOM.render(

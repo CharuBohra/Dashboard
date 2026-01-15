@@ -9,3 +9,8 @@ body{
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.e-tooltip-wrap {
+  z-index: 1000;
+}
+
