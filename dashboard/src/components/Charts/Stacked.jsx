@@ -2,7 +2,7 @@ import React from 'react'
 import {ChartComponent,SeriesCollectionDirective,SeriesDirective,Inject,Legend,Category,StackingColumnSeries,Tooltip} from "@syncfusion/ej2-react-charts"
 import { stackedPrimaryXAxis,stackedCustomSeries,stackedPrimaryYAxis } from '../../data/dummy'
 
-const Stacked = ({width,height}) => {
+const Stacked = ({width,height,currentColor}) => {
   return (
     <ChartComponent
       width={width}
@@ -17,7 +17,7 @@ const Stacked = ({width,height}) => {
         <Inject services={[Legend,Category,StackingColumnSeries,Tooltip]}/>
         <SeriesCollectionDirective>
           {stackedCustomSeries.map((item,index)=>(
-              <SeriesDirective key={index} {...item} />
+              <SeriesDirective key={index} {...item} fill={index===0?currentColor: item.fill} />
           ))}
         </SeriesCollectionDirective>
     </ChartComponent>
